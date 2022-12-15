@@ -3,10 +3,12 @@
 glob_t global;
 
 /**
-*main - entry point for stacks and queues
-*@argc: argument count
-*@argv: argument vector
-*Return: 0 on success else number
+*main - entry of the program
+*
+*@argc: number of arguments
+*@argv: argument vectors
+*
+*Return: 0
 */
 int main(int argc, char **argv)
 {
@@ -51,19 +53,21 @@ int main(int argc, char **argv)
 	return (0);
 }
 /**
-*parser - parses the command input
-*@buff: string with command
-*Return: parsed command
+*parser- parses the commmand input
+*
+*@buffer: string containing command
+*
+*Return: Parsed command
 */
-char **parser(char *buff)
+char **parser(char *buffer)
 {
-	char **cmd, token;
+	char **cmd, *token;
 	int i;
 
-	if (buff == NULL)
+	if (buffer == NULL)
 		return (NULL);
 
-	token = strtok(buff, " \t\n\r");
+	token = strtok(buffer, " \t\n\r");
 	if (token == NULL)
 		return (NULL);
 
