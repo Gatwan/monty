@@ -58,5 +58,6 @@ void pall(stack_t **stack, UN unsigned int line_number);
 void pint(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int linenumber);
+char **parser(char *buff);
 
 #endif
