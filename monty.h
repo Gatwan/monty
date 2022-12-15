@@ -35,6 +35,22 @@ typedef struct instruction_s
 	char *opcode;
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+/**
+*struct glob_s - global and its funcs
+*@fd: File descriptor
+*@line: line to getline
+*@element: element to be added
+*
+*Description: to check the file and getline
+*/
+typedef struct glob_s
+{
+	FILE *fd;
+	char *line;
+	int element;
+} glob_t;
+
+extern glob_t global;
 
 
 void push(stack_t **stack, unsigned int line_number);
