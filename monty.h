@@ -1,6 +1,7 @@
 #ifndef MONTY_H
 #define MONTY_H
 
+#define  _GNU_SOURCE
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -54,10 +55,18 @@ extern glob_t global;
 
 
 void push(stack_t **stack, unsigned int line_number);
-void pall(stack_t **stack, UN unsigned int line_number);
+void pall(stack_t **stack, unsigned int line_number);
 void pint(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
-void nop(stack_t **stack, unsigned int linenumber);
+void swap(stack_t **stack, unsigned int line_number);
+void add(stack_t **stack, unsigned int line_number);
+void sub(stack_t **stack, unsigned int line_number);
+void _div(stack_t **stack, unsigned int line_number);
+void mod(stack_t **stack, unsigned int line_number);
+void pchar(stack_t **stack, unsigned int line_number);
+void pstr(stack_t **stack, unsigned int line_number);
+void rotl(stack_t **stack, unsigned int line_number);
+
 void exec_cmd(char **command, unsigned int line_number, stack_t **head);
 char **parser(char *buff);
 int length(char **c);
@@ -65,5 +74,6 @@ int str_cmp(char *str1, char *str2);
 int is_digit(char *c);
 void _free(stack_t **stack);
 void clear(stack_t **stack);
+int check_arg(char **argument);
 
 #endif

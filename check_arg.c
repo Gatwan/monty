@@ -12,7 +12,7 @@ int check_arg(char **argument)
 
 	while (array[i])
 	{
-		if (_strcmp(array[i], argument[0]) == 0)
+		if (strcmp(array[i], argument[0]) == 0)
 			return (0);
 		i++;
 	}

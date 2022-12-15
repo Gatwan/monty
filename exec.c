@@ -14,9 +14,9 @@ void exec_cmd(char **command, unsigned int line_number, stack_t **head)
 		};
 	if (str_cmp(command[0], "push") == 0)
 	{
-		if (len(command) == 2)
+		if (length(command) == 2)
 		{
-			if (is_digit(command[1] == 1)
+			if (is_digit(command[1]) == 1)
 				global.element = atoi(command[1]);
 			else
 			{
