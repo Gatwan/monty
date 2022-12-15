@@ -60,5 +60,7 @@ void pop(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int linenumber);
 char **parser(char *buff);
 int length(char **c);
+int str_cmp(char *str1, char *str2);
+
 
 #endif
