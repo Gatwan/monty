@@ -36,24 +36,11 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-/**
-*struct list_s - linked list of struct instructions
-*@n: number of lines
-*@inst: instruction of opcode and its function
-*@next: points to the next element of the linked list
-*/
-typedef struct list_s
-{
-	int n;
-	char *inst;
-	struct list_s *next;
-} list_t;
 
 void push(stack_t **stack, unsigned int line_number);
-void stack(stack_t **stack, unsigned int line_number);
-void queue(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, UN unsigned int line_number);
-int get_file(char *str);
-int check_arg(char **argument);
+void pint(stack_t **stack, unsigned int line_number);
+void pop(stack_t **stack, unsigned int line_number);
+void nop(stack_t **stack, unsigned int linenumber);
 
 #endif
