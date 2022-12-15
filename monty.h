@@ -63,5 +63,7 @@ char **parser(char *buff);
 int length(char **c);
 int str_cmp(char *str1, char *str2);
 int is_digit(char *c);
+void _free(stack_t **stack);
+void clear(stack_t **stack);
 
 #endif
