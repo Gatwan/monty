@@ -61,6 +61,6 @@ void nop(stack_t **stack, unsigned int linenumber);
 char **parser(char *buff);
 int length(char **c);
 int str_cmp(char *str1, char *str2);
-
+int is_digit(char *c);
 
 #endif
