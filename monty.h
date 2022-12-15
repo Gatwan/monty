@@ -59,5 +59,6 @@ void pint(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int linenumber);
 char **parser(char *buff);
+int length(char **c);
 
 #endif
