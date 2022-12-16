@@ -1,5 +1,40 @@
 #include "monty.h"
 /**
+*swap - swaps top two elements
+*
+*@stack: pointer to list
+*@line_number: line no being executed
+*/
+void swap(stack_t **stack, unsigned int line_number)
+{
+	int count = 0, temp;
+	stack_t *curr = *stack;
+
+	if (curr)
+	{
+		while (curr)
+		{
+			curr = curr->next;
+			count++;
+		}
+		if (count < 2)
+		{
+			fprintf(stderr, "L%u: can't swap, stack too short\n", line_number);
+			clear(stack);
+			exit(EXIT_FAILURE);
+		}
+		temp = (*stack)->n;
+		(*stack)->n = (*stack)->next->n;
+		(*stack)->next->n = temp;
+	}
+	else
+	{
+		fprintf(stderr, "L%u: can't swap, stack too short\n", line_number);
+		clear(stack);
+		exit(EXIT_FAILURE);
+	}
+}
+/**
 *add - adds the top two elements of the stack
 *
 *@stack: pointer to list
